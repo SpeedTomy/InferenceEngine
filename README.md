@@ -1,0 +1,1 @@
+The main objective of this project is the design and implementation of an expert system, a key component in the field of artificial intelligence. An expert system simulates human reasoning within a specific knowledge domain, using rules and facts to draw logical conclusions.
