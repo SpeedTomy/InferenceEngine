@@ -1,0 +1,20 @@
+CC = gcc
+CFLAGS = -Wall -Werror
+SRCS = Projet.c main.c
+OBJ_DIR = ../Obj
+OBJS = $(patsubst %.c,$(OBJ_DIR)/%.o,$(SRCS))
+EXEC = Projet
+
+
+all: $(OBJ_DIR) $(EXEC)
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
+
+$(EXEC): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^
+
+$(OBJ_DIR)/%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+clean:
+	rm -rf $(OBJ_DIR) $(EXEC)
